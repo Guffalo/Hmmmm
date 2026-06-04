@@ -115,6 +115,7 @@ html,body{width:100%;height:100%;background:var(--bg);color:var(--text);font-fam
 </div>
 
 <script>
+if(localStorage.getItem('forge_pin')&&!sessionStorage.getItem('forge_unlocked')){window.location.replace('/launch.html');}
 var BASE = window.location.origin;
 var busy = false;
 var activeDevice = null;
