@@ -120,7 +120,8 @@ function updateDots(){
 function check(){
   if(mode === 'unlock'){
     if(entered === getPin()){
-      window.location.href = 'great_hall.html';
+      sessionStorage.setItem('forge_unlocked','1');
+    window.location.href = 'great_hall.html';
     } else {
       document.getElementById('pin-error').textContent = 'WRONG PIN';
       shake();
